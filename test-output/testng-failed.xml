@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <parameter name="name" value="zhangsan"/>
+  <parameter name="age" value="25"/>
+  <listeners>
+    <listener class-name="com.tester.extend.demo.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test thread-count="2" name="login(failed)" parallel="methods">
+    <classes>
+      <class name="com.tester.extend.demo.TestMethodsDemo">
+        <methods>
+          <include name="test1"/>
+          <include name="test4"/>
+        </methods>
+      </class> <!-- com.tester.extend.demo.TestMethodsDemo -->
+    </classes>
+  </test> <!-- login(failed) -->
+</suite> <!-- Failed suite [Suite] -->
