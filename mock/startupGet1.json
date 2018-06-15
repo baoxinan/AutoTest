@@ -2,7 +2,7 @@
   {
       "description":"模拟一个没有参数get请求",
       "request":{
-         "url":"/getdemo",
+         "uri":"/getdemo",
          "method":"get"
       },
       "response":{
@@ -12,7 +12,7 @@
   {
       "description":"这是一个带参数的get请求",
       "request":{
-          "url":"/getparam",
+          "uri":"/getparam",
           "method":"get",
           "queries":{
              "name":"huhangsan",
