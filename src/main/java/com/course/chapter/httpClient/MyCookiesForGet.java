@@ -28,7 +28,7 @@ public class MyCookiesForGet {
 		String result;
 		//从配置文件中 拼接测试的url
 		String uri = bundle.getString("getCookies.uri");
-		String testUrl = url + uri;
+		String testUrl = this.url + uri;
 		//测试逻辑代码书写
 		HttpGet get = new HttpGet(testUrl);
 		HttpClient client = new DefaultHttpClient();
