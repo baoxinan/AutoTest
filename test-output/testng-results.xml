@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="1" failed="1" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="309" started-at="2018-06-20T09:52:51Z" finished-at="2018-06-20T09:52:52Z">
+  <suite name="Default suite" duration-ms="2429" started-at="2018-06-21T03:40:36Z" finished-at="2018-06-21T03:40:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="309" started-at="2018-06-20T09:52:51Z" finished-at="2018-06-20T09:52:52Z">
+    <test name="Default test" duration-ms="2429" started-at="2018-06-21T03:40:36Z" finished-at="2018-06-21T03:40:39Z">
       <class name="com.course.chapter.httpClient.MyCookiesForPost">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.course.chapter.httpClient.MyCookiesForPost@3bfdc050]" name="beforeTest" is-config="true" duration-ms="9" started-at="2018-06-20T09:52:51Z" finished-at="2018-06-20T09:52:51Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.course.chapter.httpClient.MyCookiesForPost@66480dd7]" name="beforeTest" is-config="true" duration-ms="10" started-at="2018-06-21T03:40:36Z" finished-at="2018-06-21T03:40:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="testGetCookies()[pri:0, instance:com.course.chapter.httpClient.MyCookiesForPost@3bfdc050]" name="testGetCookies" duration-ms="269" started-at="2018-06-20T09:52:51Z" finished-at="2018-06-20T09:52:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetCookies -->
-        <test-method status="FAIL" signature="testPostMethod()[pri:0, instance:com.course.chapter.httpClient.MyCookiesForPost@3bfdc050]" name="testPostMethod" duration-ms="13" started-at="2018-06-20T09:52:52Z" depends-on-methods="com.course.chapter.httpClient.MyCookiesForPost.testGetCookies" finished-at="2018-06-20T09:52:52Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="testGetCookies()[pri:0, instance:com.course.chapter.httpClient.MyCookiesForPost@66480dd7]" name="testGetCookies" duration-ms="2387" started-at="2018-06-21T03:40:36Z" finished-at="2018-06-21T03:40:39Z">
+          <exception class="org.apache.http.conn.HttpHostConnectException">
             <message>
-              <![CDATA[expected [1] but found [2]]]>
+              <![CDATA[Connection to http://localhost:8888 refused]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [1] but found [2]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.course.chapter.httpClient.MyCookiesForPost.testPostMethod(MyCookiesForPost.java:104)
+              <![CDATA[org.apache.http.conn.HttpHostConnectException: Connection to http://localhost:8888 refused
+at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:158)
+at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:149)
+at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:573)
+at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)
+at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:754)
+at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:732)
+at com.course.chapter.httpClient.MyCookiesForPost.testGetCookies(MyCookiesForPost.java:47)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,9 +52,52 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+at java.net.Socket.connect(Socket.java:589)
+at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:123)
+at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:148)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.apache.http.conn.HttpHostConnectException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCookies -->
+        <test-method status="SKIP" signature="testPostMethod()[pri:0, instance:com.course.chapter.httpClient.MyCookiesForPost@66480dd7]" name="testPostMethod" duration-ms="0" started-at="2018-06-21T03:40:39Z" depends-on-methods="com.course.chapter.httpClient.MyCookiesForPost.testGetCookies" finished-at="2018-06-21T03:40:39Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method MyCookiesForPost.testPostMethod()[pri:0, instance:com.course.chapter.httpClient.MyCookiesForPost@66480dd7] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method MyCookiesForPost.testPostMethod()[pri:0, instance:com.course.chapter.httpClient.MyCookiesForPost@66480dd7] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostMethod -->

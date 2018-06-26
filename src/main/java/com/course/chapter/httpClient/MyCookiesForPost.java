@@ -8,6 +8,7 @@ import org.apache.http.cookie.Cookie;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -61,7 +62,7 @@ public class MyCookiesForPost {
     }
 
     @Test(dependsOnMethods = {"testGetCookies"})
-    public void testPostMethod() throws IOException {
+    public void testPostMethod() throws IOException, JSONException {
         String uri = bundle.getString("test.post.with.cookies");
         //拼接最终的测试地址
         String testUrl = this.url + uri;
