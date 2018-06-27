@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 public class ExpectedException {
 	@Test(expectedExceptions=RuntimeException.class)
 	public void runTimeExceptionFailed(){
-		System.out.println("这是一个失败的异常测试");
+		System.out.println("杩欐槸涓�涓け璐ョ殑寮傚父娴嬭瘯");
 	}
 	
 	@Test(expectedExceptions=RuntimeException.class)
 	public void runTimeExceptionSuccess(){
-		System.out.println("这是一个成功商务异常测试");
+		System.out.println("杩欐槸鎴戠殑寮傚父娴嬭瘯");
 		throw new RuntimeException();
 	}
 

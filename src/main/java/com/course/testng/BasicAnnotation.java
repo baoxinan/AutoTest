@@ -10,27 +10,27 @@ import org.testng.annotations.Test;
 public class BasicAnnotation {
 	@Test
 	public void testCase1(){
-		System.out.println("ÕâÊÇ²âÊÔÓÃÀıÒ»");
+		System.out.println("Testè¿™æ˜¯æµ‹è¯•ç”¨ä¾‹1");
 	}
 	@Test
 	public void testCase2(){
-		System.out.println("ÕâÊÇ²âÊÔÓÃÀı¶ş");
+		System.out.println("Testè¿™æ˜¯æµ‹è¯•ç”¨ä¾‹2");
 	}
 	@BeforeMethod
 	public void beforeMethod(){
-		System.out.println("ÕâÊÇ²âÊÔ·½·¨Ö®Ç°ÔËĞĞµÄ");
+		System.out.println("BeforeMethodè¿™æ˜¯åœ¨æµ‹è¯•æ–¹æ³•ä¹‹å‰è¿è¡Œçš„");
 	}
 	@AfterMethod
 	public void afterethod(){
-		System.out.println("ÕâÊÇ²âÊÔ·½·¨Ö®ºóÔËĞĞµÄ");
+		System.out.println("AfterMethodè¿™æ˜¯åœ¨æµ‹è¯•æ–¹æ³•ä¹‹åè¿è¡Œçš„");
 	}
 	@BeforeClass
 	public void beforeClass(){
-		System.out.println("ÕâÊÇÔÚÀàÔËĞĞÖ®Ç°ÔËĞĞµÄ");
+		System.out.println("beforeClassè¿™æ˜¯åœ¨ç±»è¿è¡Œä¹‹å‰è¿è¡Œçš„æ–¹æ³•");
 	}
 	@AfterClass
     public void afterClass(){
-		System.out.println("ÕâÊÇÔÚÀàÔËĞĞÖ®ºóÔËĞĞµÄ");
+		System.out.println("afterClassè¿™æ˜¯åœ¨ç±»è¿è¡Œä¹‹åè¿è¡Œçš„æ–¹æ³•");
 	}
 	
 }

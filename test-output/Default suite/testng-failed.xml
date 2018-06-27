@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.course.chapter.httpClient.MyCookiesForPost">
+      <class name="com.tester.extend.demo.TestMethodsDemo">
         <methods>
-          <include name="testPostMethod"/>
-          <include name="testGetCookies"/>
-          <include name="beforeTest"/>
+          <include name="test1"/>
+          <include name="test4"/>
         </methods>
-      </class> <!-- com.course.chapter.httpClient.MyCookiesForPost -->
+      </class> <!-- com.tester.extend.demo.TestMethodsDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
